@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sevenONEnineSECURITY LLC - Security, Cameras, Home Automation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1a202c;
+        }
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        .font-bruno {
+            font-family: 'Bruno Ace SC', sans-serif;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        /* Carousel Styles */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .carousel-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.5s ease-in-out;
+            opacity: 0;
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        /* Video embed container */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 1rem; /* rounded-2xl */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-900 p-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex items-center justify-between flex-wrap">
+            <a href="index.html" class="flex items-center flex-shrink-0 text-white mr-6">
+                <img src="images/base logo updated.png" alt="719SECURITY LLC Logo" class="h-12 w-auto mr-2 drop-shadow-lg transition-transform hover:scale-110">
+            </a>
+            <div class="block lg:hidden">
+                <button id="nav-toggle" class="flex items-center px-3 py-2 rounded text-gray-500 border border-gray-600 hover:text-white hover:border-white">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+                </button>
+            </div>
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content">
+                <div class="text-sm lg:flex-grow">
+                    <a href="services.html" class="block mt-4 lg:inline-block lg:mt-0 text-yellow-400 hover:text-white mr-4">Services</a>
+                    <a href="#about" class="block mt-4 lg:inline-block lg:mt-0 text-yellow-400 hover:text-white mr-4">About Us</a>
+                    <a href="#testimonials" class="block mt-4 lg:inline-block lg:mt-0 text-yellow-400 hover:text-white mr-4">Testimonials</a>
+                    <a href="contact.html" class="block mt-4 lg:inline-block lg:mt-0 text-yellow-400 hover:text-white">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section with Carousel -->
+        <header class="relative overflow-hidden pt-16 pb-32 h-[500px] bg-gradient-to-r from-blue-900 to-blue-700">
+            <div class="carousel-container">
+                <div class="carousel-slide active">
+                    <img src="images/Banner3.jpg" alt="Security Services Banner">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/flyer1.webp" alt="Alarm Systems">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/provision-isr-slide.avif" alt="CCTV">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250502_174753751.MP.jpg" alt="Intercom System">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/access-contrl.jpg" alt="Access Control Panel">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250502_182110922.MP.jpg" alt="Doorbell Camera">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250502_185739002.MP.jpg" alt="Smart Thermostat">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250502_202332982.MP.jpg" alt="Mounted Camera">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250502_174843962.jpg" alt="Doorbell Camera">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250502_191905023.MP.jpg" alt="Security Camera on Wall">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250517_012039938.jpg" alt="Security Truck at Jobsite">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250522_213524106.jpg" alt="Commercial Camera Installation">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250522_213651174.jpg" alt="Office Intercom">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250522_213530370.jpg" alt="Mounted Camera at Office">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250523_015946759.jpg" alt="Mounted Camera in Store">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250527_153711645.jpg" alt="Technician at Panel">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250523_015932705~2.jpg" alt="Ceiling Camera">
+                </div>
+                 <div class="carousel-slide">
+                    <img src="images/PXL_20250527_160243986.jpg" alt="Wiring Box">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250527_195427514.jpg" alt="Access Control Wiring">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250606_164721080.jpg" alt="Technician Installing Wiring">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250620_162716978.jpg" alt="Camera on Brick Wall">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250620_162703429.jpg" alt="Front Entrance Camera Installation">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250618_184341239.jpg" alt="Security Tech working on camera">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250620_202756521.jpg" alt="Two cameras mounted on side of building">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250620_170554111.jpg" alt="Security Technician at Panel">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250627_181827444.MP~3.jpg" alt="Truck in front of Museum">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250709_224943145.MP~2.jpg" alt="719Security Truck on Street">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250620_202811014.jpg" alt="Commercial Security Cameras">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250620_212625845.jpg" alt="Camera on Wall">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250710_231513681.MP~3.jpg" alt="Technician working on wiring">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250710_175524115~2.jpg" alt="Truck at Mill">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/PXL_20250709_231153477.MP~2.jpg" alt="Truck in front of Flags">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/Screenshot_20250620-114403.jpg" alt="Security Tech on Camera">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/Screenshot_20250620-114226.jpg" alt="Live View of Truck">
+                </div>
+                 <div class="carousel-slide">
+                    <img src="images/Screenshot_20250528-191956.jpg" alt="Live View of Person">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/Screenshot_20250620-125141.jpg" alt="Technician on Ladder">
+                </div>
+            </div>
+            <div class="relative container mx-auto px-4 z-10 text-center text-white -translate-y-[50%] top-1/2">
+                <img src="images/base logo updated.png" alt="719SECURITY LLC Logo" class="mx-auto mb-6 drop-shadow-lg">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg text-yellow-400 font-playfair">Protect What Matters Most</h1>
+                <p class="text-lg sm:text-xl md:text-2xl mb-8 drop-shadow-md">Comprehensive security solutions for your home and business.</p>
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="services.html" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">Our Services</a>
+                    <a href="contact.html" class="bg-transparent border-2 border-white text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">Get a Free Quote</a>
+                </div>
+            </div>
+        </header>
+        
+        <!-- About Section -->
+        <section id="about" class="py-16 bg-white text-gray-800 animate-on-scroll">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                        <img src="images/PXL_20250815_154045208.MP.jpg" alt="719SECURITY LLC Team" class="rounded-2xl shadow-xl w-full">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-4xl font-bold mb-4 text-blue-800" >About 719SECURITY LLC</h2>
+                        <p class="text-lg mb-4 text-gray-700">With over 17 years of experience, we are a <strong class="text-yellow-400">locally owned and operated</strong> security company dedicated to providing the highest level of service and protection to our community. Our mission is to give you peace of mind with cutting-edge technology and reliable support.</p>
+                        <p class="text-lg text-gray-700">From simple alarm systems to complex home automation, we tailor our solutions to meet your unique needs. We believe in building lasting relationships with our clients based on trust and exceptional service.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-gray-300 my-8">
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-16 bg-gray-900 text-gray-100 animate-on-scroll">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12 text-yellow-400">What Our Clients Say</h2>
+                <div id="testimonials-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial Card 1 -->
+                    <div class="bg-gray-800 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center">
+                        <p class="text-lg italic mb-4">"719SECURITY gave us a sense of peace of mind. Their installation was professional and the system is incredibly easy to use. Highly recommend!"</p>
+                        <p class="font-semibold text-white">- John D.</p>
+                    </div>
+                    <!-- Testimonial Card 2 -->
+                    <div class="bg-gray-800 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center">
+                        <p class="text-lg italic mb-4">"Their expertise in home automation is unmatched. Our new system has made our home safer and more convenient than ever before."</p>
+                        <p class="font-semibold text-white">- Sarah P.</p>
+                    </div>
+                    <!-- Testimonial Card 3 -->
+                    <div class="bg-gray-800 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center">
+                        <p class="text-lg italic mb-4">"We've used them for years for our commercial properties. Their quick service and reliable systems are why we continue to trust them with our security."</p>
+                        <p class="font-semibold text-white">- Michael B.</p>
+                    </div>
+                    <!-- Testimonial Card 4 -->
+                     <div class="bg-gray-800 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center">
+                        <p class="text-lg italic mb-4">"Absolutely fantastic service! The team was knowledgeable, friendly, and did a great job with our CCTV installation."</p>
+                        <p class="font-semibold text-white">- Robert S.</p>
+                    </div>
+                </div>
+                 <div class="flex justify-center mt-8">
+                    <button id="add-testimonial-btn" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                        Share your Story
+                    </button>
+                </div>
+                <div id="testimonial-form-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50">
+                    <div class="bg-white rounded-lg p-8 max-w-lg w-full">
+                        <h3 class="text-2xl font-bold mb-4 text-center text-blue-800">Submit Your Testimonial</h3>
+                        <form id="testimonial-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-semibold mb-1">Your Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div>
+                                <label for="testimonial" class="block text-gray-700 font-semibold mb-1">Your Testimonial</label>
+                                <textarea id="testimonial" name="testimonial" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                            </div>
+                            <div class="flex justify-end space-x-4">
+                                <button type="button" id="close-modal-btn" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-6 rounded-full transition duration-300">Cancel</button>
+                                <button type="submit" class="bg-blue-800 hover:bg-blue-900 text-white font-semibold py-2 px-6 rounded-full transition duration-300">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-gray-300 my-8">
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 text-center py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://www.facebook.com/" target="_blank" class="text-gray-400 hover:text-yellow-400 transition-colors">
+                    <i class="fab fa-facebook-f w-8 h-8"></i>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" class="text-gray-400 hover:text-yellow-400 transition-colors">
+                    <i class="fab fa-instagram w-8 h-8"></i>
+                </a>
+                 <a href="https://www.tiktok.com/" target="_blank" class="text-gray-400 hover:text-yellow-400 transition-colors">
+                    <i class="fab fa-tiktok w-8 h-8"></i>
+                </a>
+            </div>
+            <p>&copy; 2024 sevenONEnineSECURITY LLC. All Rights Reserved.</p>
+            <p class="mt-2 text-sm">Locally Owned and Operated</p>
+        </div>
+    </footer>
+    
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, onSnapshot, collection, addDoc, serverTimestamp, query, where, getDocs, updateDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        import { setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        setLogLevel('debug');
+
+        const firebaseConfig = JSON.parse(typeof __firebase_config !== 'undefined' ? __firebase_config : '{}');
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : '';
+        let userId = null;
+        let isAuthReady = false;
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const auth = getAuth(app);
+
+        onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                userId = user.uid;
+            } else {
+                try {
+                    if (initialAuthToken) {
+                        await signInWithCustomToken(auth, initialAuthToken);
+                    } else {
+                         await signInAnonymously(auth);
+                    }
+                } catch (error) {
+                    console.error("Firebase auth error:", error);
+                }
+            }
+            isAuthReady = true;
+
+            // Listen for new testimonials in real-time only after auth is ready
+            const testimonialsRef = collection(db, `artifacts/${appId}/public/data/testimonials`);
+            const q = query(testimonialsRef);
+            onSnapshot(q, (snapshot) => {
+                // Clear existing testimonials, except for the default ones
+                const defaultTestimonials = testimonialsList.querySelectorAll('.bg-gray-800');
+                for (let i = 4; i < defaultTestimonials.length; i++) {
+                    defaultTestimonials[i].remove();
+                }
+
+                snapshot.docChanges().forEach((change) => {
+                    if (change.type === "added") {
+                        const data = change.doc.data();
+                        const newTestimonialCard = document.createElement('div');
+                        newTestimonialCard.className = 'bg-gray-800 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center fade-in-up';
+                        newTestimonialCard.innerHTML = `
+                            <p class="text-lg italic mb-4">"${data.testimonial}"</p>
+                            <p class="font-semibold text-white">- ${data.name}</p>
+                        `;
+                        testimonialsList.appendChild(newTestimonialCard);
+                    }
+                });
+            });
+        });
+
+        // Carousel functionality
+        const slides = document.querySelectorAll('.carousel-slide');
+        let currentSlide = 0;
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+        setInterval(nextSlide, 5000);
+        showSlide(currentSlide);
+
+        // Toggle mobile navigation
+        const navToggle = document.getElementById('nav-toggle');
+        const navContent = document.getElementById('nav-content');
+        navToggle.addEventListener('click', () => {
+            navContent.classList.toggle('hidden');
+        });
+
+        // Testimonial Form functionality
+        const testimonialFormModal = document.getElementById('testimonial-form-modal');
+        const addTestimonialBtn = document.getElementById('add-testimonial-btn');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const testimonialForm = document.getElementById('testimonial-form');
+        const testimonialsList = document.getElementById('testimonials-list');
+
+        // Show the modal
+        addTestimonialBtn.addEventListener('click', () => {
+            testimonialFormModal.classList.remove('hidden');
+        });
+
+        // Hide the modal
+        closeModalBtn.addEventListener('click', () => {
+            testimonialFormModal.classList.add('hidden');
+        });
+
+        testimonialForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (!isAuthReady || !userId) {
+                console.error("User not authenticated. Cannot submit testimonial.");
+                return;
+            }
+            const name = testimonialForm.name.value;
+            const testimonialText = testimonialForm.testimonial.value;
+
+            try {
+                const testimonialsCollection = collection(db, `artifacts/${appId}/public/data/testimonials`);
+                await addDoc(testimonialsCollection, {
+                    name: name,
+                    testimonial: testimonialText,
+                    timestamp: serverTimestamp(),
+                });
+                console.log("Testimonial submitted successfully!");
+                testimonialForm.reset();
+                testimonialFormModal.classList.add('hidden');
+            } catch (error) {
+                console.error("Error submitting testimonial:", error);
+            }
+        });
+
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>719SECURITY LLC - Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1a202c;
+        }
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-900 p-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex items-center justify-between flex-wrap">
+            <a href="index.html" class="flex items-center flex-shrink-0 text-white mr-6">
+                <img src="images/base logo updated.png" alt="719SECURITY LLC Logo" class="h-12 w-auto mr-2 drop-shadow-lg transition-transform hover:scale-110">
+            </a>
+            <div class="block lg:hidden">
+                <button id="nav-toggle" class="flex items-center px-3 py-2 rounded text-gray-500 border border-gray-600 hover:text-white hover:border-white">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+                </button>
+            </div>
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content">
+                <div class="text-sm lg:flex-grow">
+                    <a href="services.html" class="block mt-4 lg:inline-block lg:mt-0 text-yellow-400 hover:text-white mr-4">Services</a>
+                    <a href="index.html#about" class="block mt-4 lg:inline-block lg:mt-0 text-yellow-400 hover:text-white mr-4">About Us</a>
+                    <a href="index.html#testimonials" class="block mt-4 lg:inline-block lg:mt-0 text-yellow-400 hover:text-white mr-4">Testimonials</a>
+                    <a href="contact.html" class="block mt-4 lg:inline-block lg:mt-0 text-yellow-400 hover:text-white">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Services Section -->
+        <section id="services" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl font-bold text-center mb-12 text-blue-800 font-playfair animate-on-scroll">Our Comprehensive Services</h1>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1: Alarm Systems -->
+                    <div class="bg-white rounded-2xl shadow-xl p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl">
+                        <img src="images/alert-360-smart-security-easy-shop.png" alt="Alarm Systems Icon" class="w-24 h-24 mb-4 drop-shadow-md">
+                        <h3 class="text-xl font-semibold mb-2 text-blue-800">Alarm Systems & Monitoring</h3>
+                        <p class="text-gray-700">Protect your home or business with our state-of-the-art alarm systems and 24/7 professional monitoring services.</p>
+                    </div>
+
+                    <!-- Service Card 2: CCTV and Cameras -->
+                    <div class="bg-white rounded-2xl shadow-xl p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl">
+                        <img src="images/provision-isr-slide.avif" alt="CCTV Cameras Icon" class="w-24 h-24 mb-4 drop-shadow-md">
+                        <h3 class="text-xl font-semibold mb-2 text-blue-800">CCTV & Surveillance Cameras</h3>
+                        <p class="text-gray-700">Monitor your property with high-definition CCTV and surveillance cameras, accessible from anywhere in the world.</p>
+                    </div>
+
+                    <!-- Service Card 3: Home Automation -->
+                    <div class="bg-white rounded-2xl shadow-xl p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl">
+                        <img src="images/smart-home.jpg" alt="Home Automation Icon" class="w-24 h-24 mb-4 drop-shadow-md">
+                        <h3 class="text-xl font-semibold mb-2 text-blue-800">Smart Home Automation</h3>
+                        <p class="text-gray-700">Integrate your security, lighting, and climate control into one smart system for ultimate convenience and efficiency.</p>
+                    </div>
+
+                    <!-- Service Card 4: Access Control -->
+                    <div class="bg-white rounded-2xl shadow-xl p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl">
+                        <img src="images/access-contrl.jpg" alt="Access Control Icon" class="w-24 h-24 mb-4 drop-shadow-md">
+                        <h3 class="text-xl font-semibold mb-2 text-blue-800">Access Control</h3>
+                        <p class="text-gray-700">Manage who enters and exits your property with advanced access control systems, perfect for businesses and multi-tenant buildings.</p>
+                    </div>
+
+                    <!-- Service Card 5: Temporary Alarm Systems -->
+                    <div class="bg-white rounded-2xl shadow-xl p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl">
+                        <img src="images/flyer1.webp" alt="Temporary Alarms Icon" class="w-24 h-24 mb-4 drop-shadow-md">
+                        <h3 class="text-xl font-semibold mb-2 text-blue-800">Temporary Alarm Systems</h3>
+                        <p class="text-gray-700">Secure your property for short-term needs, perfect for construction sites, events, or when you are away on an extended vacation.</p>
+                    </div>
+
+                    <!-- Service Card 6: WiFi Mesh Solutions -->
+                    <div class="bg-white rounded-2xl shadow-xl p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl">
+                        <img src="images/WiFi-mesh-avt-1-1.jpg" alt="WiFi Mesh Icon" class="w-24 h-24 mb-4 drop-shadow-md">
+                        <h3 class="text-xl font-semibold mb-2 text-blue-800">WiFi Mesh Solutions</h3>
+                        <p class="text-gray-700">Ensure a strong and reliable internet connection throughout your entire property with our professional WiFi mesh solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 text-center py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://www.facebook.com/" target="_blank" class="text-gray-400 hover:text-yellow-400 transition-colors">
+                    <i class="fab fa-facebook-f w-8 h-8"></i>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" class="text-gray-400 hover:text-yellow-400 transition-colors">
+                    <i class="fab fa-instagram w-8 h-8"></i>
+                </a>
+                 <a href="https://www.tiktok.com/" target="_blank" class="text-gray-400 hover:text-yellow-400 transition-colors">
+                    <i class="fab fa-tiktok w-8 h-8"></i>
+                </a>
+            </div>
+            <p>&copy; 2024 719SECURITY LLC. All Rights Reserved.</p>
+            <p class="mt-2 text-sm">Locally Owned and Operated</p>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navContent = document.getElementById('nav-content');
+        navToggle.addEventListener('click', () => {
+            navContent.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>719SECURITY LLC - Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1a202c;
+        }
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-900 p-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex items-center justify-between flex-wrap">
+            <a href="index.html" class="flex items-center flex-shrink-0 text-white mr-6">
+                <img src="images/base logo updated.png" alt="719SECURITY LLC Logo" class="h-12 w-auto mr-2 drop-shadow-lg transition-transform hover:scale-110">
+            </a>
+            <div class="block lg:hidden">
+                <button id="nav-toggle" class="flex items-center px-3 py-2 rounded text-gray-500 border border-gray-600 hover:text-white hover:border-white">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+                </button>
+            </div>
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content">
+                <div class="text-sm lg:flex-grow">
+                    <a href="services.html" class="block mt-4 lg:inline-block lg:mt-0 text-yellow-400 hover:text-white mr-4">Services</a>
+                    <a href="index.html#about" class="block mt-4 lg:inline-block lg:mt-0 text-yellow-400 hover:text-white mr-4">About Us</a>
+                    <a href="index.html#testimonials" class="block mt-4 lg:inline-block lg:mt-0 text-yellow-400 hover:text-white mr-4">Testimonials</a>
+                    <a href="contact.html" class="block mt-4 lg:inline-block lg:mt-0 text-yellow-400 hover:text-white">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-16">
+        <!-- Video Tutorials Section -->
+        <section id="tutorials" class="container mx-auto px-4 mb-16">
+            <h1 class="text-4xl font-bold text-center mb-12 text-blue-800 font-playfair">Video Tutorials</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Video 1 -->
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=T2Q8n-o63D-B4u9G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <!-- Video 2 -->
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/3Q3yC-vXn88?si=C8rD55i49uD8fB0b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <!-- Video 3 -->
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/YIspIu_P94Q?si=YxR_E2vP6jSj2L3Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold text-center mb-12 text-blue-800 font-playfair">Contact Us</h1>
+            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Contact Form & Info -->
+                    <div>
+                        <h2 class="text-2xl font-semibold mb-4 text-blue-800">Get in Touch</h2>
+                        <form id="contact-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-semibold mb-1">Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 font-semibold mb-1">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-gray-700 font-semibold mb-1">Message</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            </div>
+                            <button type="submit" class="bg-blue-800 hover:bg-blue-900 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">Send Message</button>
+                        </form>
+                    </div>
+
+                    <!-- Map & Business Info -->
+                    <div>
+                        <h2 class="text-2xl font-semibold mb-4 text-blue-800">Service Areas</h2>
+                        <div class="bg-gray-200 rounded-2xl overflow-hidden mb-8 shadow-md">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15446.591244837893!2d-103.54141649999999!3d37.94723145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x871239f50689b913%3A0x6291a92e160a221a!2sLa%20Junta%2C%20CO%2081050%2C%20USA!5e0!3m2!1sen!2sin!4v1714574921966!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <h2 class="text-2xl font-semibold mb-4 text-blue-800">Get in Touch Directly</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <a href="tel:719-292-2642" class="text-yellow-400 hover:underline transition-colors transform hover:scale-105">
+                                    <h4 class="text-xl font-bold">Call Us: 719-292-2642</h4>
+                                </a>
+                            </div>
+                            <div class="flex items-center">
+                                <h4 class="text-xl font-bold text-blue-800">Email:</h4>
+                                <a href="mailto:security@719security.com" class="ml-2 text-yellow-400 hover:underline">security@719security.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 text-center py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://www.facebook.com/" target="_blank" class="text-gray-400 hover:text-yellow-400 transition-colors">
+                    <i class="fab fa-facebook-f w-8 h-8"></i>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" class="text-gray-400 hover:text-yellow-400 transition-colors">
+                    <i class="fab fa-instagram w-8 h-8"></i>
+                </a>
+                 <a href="https://www.tiktok.com/" target="_blank" class="text-gray-400 hover:text-yellow-400 transition-colors">
+                    <i class="fab fa-tiktok w-8 h-8"></i>
+                </a>
+            </div>
+            <p>&copy; 2024 719SECURITY LLC. All Rights Reserved.</p>
+            <p class="mt-2 text-sm">Locally Owned and Operated</p>
+        </div>
+    </footer>
+    
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navContent = document.getElementById('nav-content');
+        navToggle.addEventListener('click', () => {
+            navContent.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
+
